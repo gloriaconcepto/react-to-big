@@ -1,25 +1,33 @@
-import logo from './logo.svg';
+import React from 'react';
+import BackGround from './BackgroundColor';
+import Form from './Form';
+import Chart from './Chart';
 import './App.css';
 
+
 function App() {
+
+
+
+
+  const callApi = (data) => {
+    console.log(data)
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <section className='compon-1'>Image 1</section>
+      <section className='comp2'>
+
+        <BackGround />
+
+        <Form/>
+        <Chart action={callApi}/>
+      </section>
     </div>
   );
 }
 
 export default App;
+
+
+
